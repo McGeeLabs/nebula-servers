@@ -385,6 +385,30 @@ async function runCheck(server) {
 // ---------------------------
 // Main
 // ---------------------------
+async function runOnce() {
+  await main();
+}
+
+async function runWatch() {
+  // Run immediately, then repeat
+  await runOnce();
+  setInterval(runOnce, DEFAULT_INTERVAL_MS);
+}
+
+const DEFAULT_INTERVAL_MS = 60000; // 1 minute
+
+// ---------------------------
+// Entry point
+// ---------------------------
+
+const args = new Set(process.argv.slice(2));
+const watch = args.has("--watch") || args.has("-w");
+
+(watch ? runWatch() : runOnce()).catch((err) => {
+  console.error("[poller] Fatal error:", err);
+  process.exitCode = 1;
+});
+
 async function main() {
   const config = await readJsonIfExists(CONFIG_PATH, null);
   if (!config) {
