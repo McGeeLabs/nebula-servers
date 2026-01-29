@@ -1,0 +1,11 @@
+{
+  "name": "nebula-servers-poller",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "poll": "node poller.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

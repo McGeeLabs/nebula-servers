@@ -1,0 +1,48 @@
+[
+  {
+    "id": "custom-id-here",
+    "group": "group-here",
+    "kind": "kind-here",
+    "subkind": "subkind-here",
+    "name": "Service Name Here",
+    "description": "Your description here.",
+    "enabled": true,
+    "maintenance": false,
+    "maintenanceReason": null,
+
+    "ip": "YOUR_SERVER_IP",
+    "port": "YOUR_SERVER_PORT",
+    "url": null,
+
+    "polling": {
+      "method": "tcp",
+      "timeoutMs": 3500,
+      "intervalMs": 15000,
+      "retries": 1
+    },
+
+    "endpoints": {
+      "homepage": null,
+      "statusUrl": null,
+      "joinHint": "Eexplanation of use."
+    },
+
+    "notifications": {
+      "discord": {
+        "enabled": false,
+        "channelId": null,
+        "mentionRoleId": null,
+        "notifyOn": ["down", "up"]
+      }
+    },
+
+    "tags": ["EXAMPLE 1", "EXAMPLE 2"],
+
+    "meta": {
+      "environment": "prod",
+      "region": "vps",
+      "owner": "YOUR NAME",
+      "notes": null
+    }
+  }
+]

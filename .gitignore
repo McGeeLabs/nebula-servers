@@ -1,3 +1,5 @@
 node_modules
 .env
 .DS_Store
+frontend/servers.status.json
+frontend/servers.config.json

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
   <meta charset="UTF-8" />
   <title>Nebula Servers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,7 +14,7 @@
       <div class="brand">
         <div class="brand-text">
           <h1>Nebula Servers<span class="dot">.</span></h1>
-          <p class="tagline">Real-time service and server status</p>
+          <p class="tagline">Live game server status &amp; player activity</p>
             <div class="tabs">
                 <a class="tab" href="./index.html">All</a>
                 <a class="tab" href="./games.html">Games</a>
@@ -27,11 +27,7 @@
 
     <main class="container">
       <section class="card">
-        <h2>All Services</h2>
-
-        <div class="fine" id="activeFilter">Filter: All</div>
-
-      </br>
+        <h2>Game Servers</h2>
 
         <div class="grid" id="serverGrid"></div>
 
@@ -40,6 +36,8 @@
     </main>
   </div>
 
+  <script>window.NEBULA_PAGE = "games";</script>
+  <script src="./app.js"></script>
   <script src="./render.js"></script>
 
 </body>
