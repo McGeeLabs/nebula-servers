@@ -1,2 +1,5 @@
 # nebula-servers
-A self-hosted, customizable game server status dashboard with live player counts, join links, notifications, and uptime monitoring — built for the Nebula / McGee Labs ecosystem.
+
+Nebula Servers is a self-hosted dashboard for monitoring game servers,
+showing live player counts, join links, and service health in one place.
+
